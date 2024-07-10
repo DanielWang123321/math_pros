@@ -1,0 +1,1 @@
+Notes while leaning math and Python.
