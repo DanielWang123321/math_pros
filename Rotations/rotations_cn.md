@@ -45,6 +45,25 @@ R(\theta) = \[
 \]
 
 ## 三维空间
+**定义：**
+
+旋转矩阵（rotation matrix），是一个正交矩阵，即满足：
+$$
+R R^{T}=I \text { 且 } \operatorname{det}(R)=1
+$$
+
+**欧拉角：**
+
+欧拉角描述了一个三维空间中的刚体从一个固定参考系的位置到一个新位置的三个旋转角度。常用的旋转顺序有 Z-Y-X、X-Y-Z 等。
+对于 Z-Y-X 顺序，欧拉角定义为：
+$$
+R(\alpha, \beta, \gamma)=\begin{bmatrix}
+    \cos \alpha \cos \beta & \cos \alpha \sin \beta \sin \gamma - \sin \alpha \cos \gamma & \cos \alpha \sin \beta \cos \gamma + \sin \alpha \sin \gamma \\
+    \sin \alpha \cos \beta & \sin \alpha \sin \beta \sin \gamma + \cos \alpha \cos \gamma & \sin \alpha \sin \beta \cos \gamma - \cos \alpha \sin \gamma \\
+    -\sin \beta & \cos \beta \sin \gamma & \cos \beta \cos \gamma
+\end{bmatrix}
+$$
+
 
 
 
