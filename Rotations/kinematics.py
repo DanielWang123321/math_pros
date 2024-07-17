@@ -25,6 +25,45 @@ def euler_to_rotation_matrix(a,b,c):
     R=np.dot(Rz,np.dot(Ry,Rx))
     return R
 
+
+
+def quaternion_to_euler(q):
+    # w,x,y,z is quaternion, w²+x²+y²+z²=1
+    # a,b,c is Roll, Pitch, Yaw
+
+    w,x,y,z=q
+    a = np.arctan2(2.0 * (w * z + x * y), 1.0 - 2.0 * (y * y + z * z))
+
+
+    sin_theta = 2.0 * (w * y - z * x)
+    if np.abs(sin_theta) >= 1:
+        b = np.sign(sin_theta) * np.pi / 2  # use 90 degrees if out of range
+    else:
+        b = np.arcsin(sin_theta)
+
+
+    c = np.arctan2(2.0 * (w * x + y * z), 1.0 - 2.0 * (x * x + y * y))
+    return a, b, c
+
+
+
+def euler_to_quaternion(a, b, c):
+    cy = np.cos(a * 0.5)
+    sy = np.sin(a * 0.5)
+    cp = np.cos(b * 0.5)
+    sp = np.sin(b * 0.5)
+    cr = np.cos(c * 0.5)
+    sr = np.sin(c * 0.5)
+
+    w = cr * cp * cy + sr * sp * sy
+    x = sr * cp * cy - cr * sp * sy
+    y = cr * sp * cy + sr * cp * sy
+    z = cr * cp * sy - sr * sp * cy
+
+    return np.array([w, x, y, z])
+
+
+
 ##useage
 Roll=np.deg2rad(180)
 Pitch=np.deg2rad(0)

@@ -13,12 +13,12 @@ x=l* cos(β)\
 y=l* sin(β)
 
 The coordinates of P' are (x', y') \
-x'=l* cos(α+β)=l*[cos(α)*cos(β)+sin(α)*sin(β)]=l*cos(β)*cos(α)+l*sin(β)*sin(α)=x*cos(α)+y*sin(α)
+x'=l* cos(α+β)=l*[cos(α)*cos(β)+sin(α)*sin(β)]=l*cos(β)*cos(α)-l*sin(β)*sin(α)=x*cos(α)-y*sin(α)
 \
 y=l* sin(α+β)=l*[sin(α)*cos(β)+cos(α)*sin(β)]=l*cos(β)*sin(α)+l*sin(β)*cos(α)=x*sin(α)+y*cos(α)
 
 Thus, the coordinates of P' can be expressed as
-P'=(x*cos(α)+y*sin(α),x*sin(α)+y*cos(α))
+P'=(x*cos(α)-y*sin(α),x*sin(α)+y*cos(α))
 The coordinates of P' represented using a matrix are \
 ![Figure 1](../Resources/2d_mat.png) \
 From this, it can be concluded that a point P(x, y) in a two-dimensional Cartesian coordinate system, when rotated counterclockwise by an angle θ around the origin, results in point P' (x', y'), which can be represented as point A multiplied by the rotation matrix R(θ) to obtain point B.

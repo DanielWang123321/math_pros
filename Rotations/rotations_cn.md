@@ -13,12 +13,12 @@ x=l* cos(β)\
 y=l* sin(β)
 
 P'的坐标为(x',y') \
-x'=l* cos(α+β)=l*[cos(α)*cos(β)+sin(α)*sin(β)]=l*cos(β)*cos(α)+l*sin(β)*sin(α)=x*cos(α)+y*sin(α)
+x'=l* cos(α+β)=l*[cos(α)*cos(β)-sin(α)*sin(β)]=l*cos(β)*cos(α)-l*sin(β)*sin(α)=x*cos(α)-y*sin(α)
 \
 y=l* sin(α+β)=l*[sin(α)*cos(β)+cos(α)*sin(β)]=l*cos(β)*sin(α)+l*sin(β)*cos(α)=x*sin(α)+y*cos(α)
 
 所以P'的坐标可以表示为\
-P'=(x*cos(α)+y*sin(α),x*sin(α)+y*cos(α))
+P'=(x*cos(α)-y*sin(α),x*sin(α)+y*cos(α))
 
 P'的坐标使用矩阵表示为 \
 ![图一](../Resources/2d_mat.png) \
