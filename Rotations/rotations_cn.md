@@ -27,11 +27,23 @@ P'的坐标使用矩阵表示为 \
 ![图一](../Resources/R_theta.png)
 
 
-## 三维空间
+## 2. 三维空间
 三维直角坐标系内的点A(x,y,z)，先绕X按右手定则旋转角度θ，再绕Y轴按右手定则旋转角度θ，再绕Z轴按右手定则旋转角度θ，得到点B(x',y',z')，这三次旋转可以表示为点A经过三次矩阵变换得到点B,旋转矩阵分别为Rx(θ), Ry(θ), Rz(θ) \
 
 ![图一](../Resources/Rx_theta.png) \
 ![图一](../Resources/Ry_theta.png) \
 ![图一](../Resources/Rz_theta.png) \
+
+
+
+假设一个点B，绕X轴的旋转角度γ, 绕Y轴的旋转角度β，绕Z轴旋转的角度α。 \
+设R为Rz(α)、Ry(β)、Rx(γ)三次旋转的等价旋转矩阵，则R=Rz(α)·Ry(β)·Rx(γ)
+点B的坐标点A的坐标左乘旋转矩阵，即B=R·A，其中
+
+
+![图一](../Resources/R_1.png) \
+![图一](../Resources/R_2.png) 
+
+如果使用欧拉角，γ对应Roll；β对应Pitch；α对应Yaw.
 
 
